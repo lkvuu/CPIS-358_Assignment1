@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--car rental contact & feedback page-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Online car rental website">
+    <meta name="keywords" content="car rental, rent a car, booking">
+
+    <title>Car Rental - Contact Us</title>
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Internal CSS-->
+    <style>
+
+        select{
+            font-weight: bold;
+        }
+
+    </style>
+</head>    
+
+<body>
+    <!--Header Section with Navigation Menu-->
+    <header>
+        
+            <section id="logo">
+            <img src="images/logo.svg" alt="Car Rental Logo" width="280" height="150" usemap="#logomap">
+            <map name="logomap">
+                 <area shape="rect" coords="0,0,280,150" href="index.html" alt="About Us">
+        </map>
+        </section>
+        
+        
+
+        <h1 style="color: rgb(47, 113, 206);">Welcome to Our Car Rental Service</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="search.html">Search Cars</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="policy.html">Policy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Us & feedback</h1>
+        <p>Please fill out this form to get in <strong>touch with us or share your feedback </strong> regarding our services</p>
+
+        <form method="post" action="index.html">
+
+            <p>
+                <label>
+                    First name:
+                    <input type="text" name="fname" size="25" maxlength="30" required>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Last name:
+                    <input type="text" name="lname" size="25" maxlength="30" required>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Email address:
+                    <input type="email" name="email" placeholder="example@email.com" required>
+                </label>
+            </p>
+
+            <p>Inquiry / Subject</p>
+            <select name="subject">
+                <option>General Inquiry</option>
+                <option>Customer Feedback</option>
+                <option>Technical Support</option>
+                <option>Others</option>
+            </select>
+
+            <p>
+                
+                <textarea name="feedback" rows="10" cols="30" style="color: rgb(99, 99, 99);">Your feedback or massage about our service:</textarea>
+            </p>
+            
+            <p>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </p>
+        </form>
+    </main>
+
+    <!--Footer Section-->
+    <footer>
+        <p style="color: rgb(66, 66, 66);">&copy; 2026 Masar Car Rental. All rights reserved.</p>
+        <address>
+            <p>Contact us: <a href="mailto:info@masarcarrental.com">info@masarcarrental.com</a></p>
+        </address>
+        <a href="#logo">Back to Top</a>
+    </footer>
+    
+</body>
+</html>

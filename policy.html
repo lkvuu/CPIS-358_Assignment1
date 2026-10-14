@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--car rental policy page-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Online car rental website">
+    <meta name="keywords" content="car rental, rent a car, booking">
+
+    <title>Car Rental - Policy</title>
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Internal CSS-->
+    <style>
+        
+        table{
+            margin: auto;
+            border-collapse:collapse;
+            text-align: center;
+        }
+        
+    </style>
+</head>    
+
+<body>
+    <!--Header Section with Navigation Menu-->
+    <header>
+        
+            <section id="logo">
+            <img src="images/logo.svg" alt="Car Rental Logo" width="280" height="150" usemap="#logomap">
+            <map name="logomap">
+                 <area shape="rect" coords="0,0,280,150" href="index.html" alt="About Us">
+        </map>
+        </section>
+        
+        
+
+        <h1 style="color: rgb(47, 113, 206);">Welcome to Our Car Rental Service</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="search.html">Search Cars</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="policy.html">Policy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <h2>terms & Conditions Policy</h2>
+        <p>Please read our general terms and conditions carefully before renting a vehicle.</p>
+        <ul>
+            <li>Drivers must be at least 21 years old a valid driver's license.</li>
+            <li>A valid credit card is requred for security deposit processing.</li>
+            <li>Sub-letting or using the vehicle for commerical racing is strictly prohibited</li>
+        </ul>
+    <br>
+    <hr>
+
+        <h2>Return Policy</h2>
+        <p>Our return policy ensures a smooth and fair process when bringing the vehicle back to our branch.</p>
+        <ul>
+            <li><strong>Location: </strong> Vehicles must be returned to the agreed-upon branch location.</li>
+            <li><strong>Fuel Policy: </strong> Vehicles are delivered with a full tank and must be returned with a full tank to avoid refueling fees.</li>
+            <li><strong>Cleanliness: </strong> The vehicle interior must be kept reasonably clean and free of garbage upon return.</li>
+            <li><strong>Late Returns: </strong> A grace period of 30 minutes is allowed; after that, additional hourly charges will apply</li>
+        </ul>
+    <br>
+    <hr>
+        <h2 style="text-align: center;">Refund Rates Breakdown</h2>
+        <table border="1">
+            <tr>
+                <th>Cancellation Period</th>
+                <th>Refund Percentage</th>
+                <th>Processing Time</th>
+            </tr>
+
+            <tr>
+                <td>48+ hours prior to pick-up</td>
+                <td>100% Full Refund</td>
+                <td>3 - 5 Business Days</td>
+            </tr>
+
+            <tr>
+                <td>24 to 48 hours prior to pick-up</td>
+                <td>50% Refund</td>
+                <td>5 - 7 Business Days</td>
+            </tr>
+
+            <tr>
+                <td>Less than 24 hours / No Show</td>
+                <td>No Refund</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+        <br>
+        <hr>
+
+        <h3>Acknowledhment & Acceptance</h3>
+        <form method="post" action="checkout.html">
+            <p>
+                <label>
+                    <input type="checkbox" name="agree_terms" value="accepted" required>
+                    I have read and agree to the <strong>Terms and conditions Policy.</strong>
+                </label>
+            </p>
+            <p>
+                <input type="submit" value="confirm & Accept">
+            </p>
+        </form>
+        <br>
+        <hr>
+
+    </main>
+    <!--Footer Section-->
+    <footer>
+        <p style="color: rgb(66, 66, 66);">&copy; 2026 Masar Car Rental. All rights reserved.</p>
+        <address>
+            <p>Contact us: <a href="mailto:info@masarcarrental.com">info@masarcarrental.com</a></p>
+        </address>
+        <a href="#logo">Back to Top</a>
+    </footer>
+    
+</body>
+</html>
+
+    

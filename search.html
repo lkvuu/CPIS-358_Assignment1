@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--car rental search page-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Online car rental website">
+    <meta name="keywords" content="car rental, rent a car, booking">
+
+    <title>Car Rental - Search Cars</title>
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Internal CSS-->
+    <style>
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form p {
+            margin-bottom: 15px;
+        }
+
+        form label {
+            font-weight: bold;
+            color:#333;
+            font-size: 14px;
+        }
+
+        form input[type="search"],form input[type="date"],form input[type="time"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        
+    </style>
+</head>    
+
+<body>
+
+    <!--Header Section with Navigation Menu-->
+    <header>
+        <section id="logo">
+            <img src="images/logo.svg" alt="Car Rental Logo" width="280" height="150" usemap="#logomap">
+            <map name="logomap">
+                 <area shape="rect" coords="0,0,280,150" href="index.html" alt="About Us">
+        </map>
+        </section>
+        
+
+        <h1 style="color: rgb(47, 113, 206);">Welcome to Our Car Rental Service</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="search.html">Search Cars</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="policy.html">Policy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <!--Main Content Section-->
+    <main>
+        <form action="result.html" method="GET">
+
+            <!--Pick-up Location-->
+            <p>
+                <label for="location">Pick-up Location:</label><br>
+                <input type="search" id="location" name="location" list="branches" required>
+                <datalist id="branches">
+                    <option value="Jeddah - King Abdulaziz Intl Airport">
+                    <option value="Riyadh - King Khalid Intl Airport">
+                    <option value="Dammam - King Fahd Intl Airport">
+                    <option value="Al Baha - King Saud Airport">
+                </datalist>
+            </p>
+
+            <!--Pick-up Date-->
+            <p>
+                <label for="pickup-date">Pick-up Date:</label><br>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+            </p>
+
+            <!--Pick-up Time-->
+            <p>
+                <label for="pickup-time">Pick-up Time:</label><br>
+                <input type="time" id="pickup-time" name="pickup-time" required>
+            </p>
+
+            <!--Drop-off Date-->
+            <p>
+                <label for="dropoff-date">Drop-off Date:</label><br>
+                <input type="date" id="dropoff-date" name="dropoff-date" required>
+            </p>
+
+            <!--Drop-off Time-->
+            <p>
+                <label for="dropoff-time">Drop-off Time:</label><br>
+                <input type="time" id="dropoff-time" name="dropoff-time" required>
+            </p>
+
+            <!--Submit and Reset Buttons-->
+            <p style="text-align: center;">
+                <input type="submit" value="Search Cars">
+                <input type="reset" value="Clear">
+            </p>
+
+        </form>
+    </main>
+
+    <!--Footer Section-->
+    <footer>
+        <p style="color: rgb(66, 66, 66);">&copy; 2026 Masar Car Rental. All rights reserved.</p>
+        <address>
+            <p>Contact us: <a href="mailto:info@masarcarrental.com">info@masarcarrental.com</a></p>
+        </address>
+        <a href="#logo">Back to Top</a>
+    </footer>
+    
+    
+</body>
+</html>
