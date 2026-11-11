@@ -34,16 +34,24 @@
             background-color: #ffffff;
         }
 
+        .edit-form input[type="button"] {
+            background-color: #2f71ce;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
     </style>
 </head>    
 
 <body>
-    <!--Header Section with Navigation Menu-->
+    
     <header>
         <section id="logo">
             <img src="images/logo.svg" alt="Car Rental Logo" width="280" height="150" usemap="#logomap">
             <map name="logomap">
-                 <area shape="rect" coords="0,0,280,150" href="index.html" alt="About Us">
+                 <area shape="rect" coords="0,0,280,150" href="about.html" alt="About Us">
             </map>
         </section>
 
@@ -51,8 +59,6 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li> 
-                <li><a href="search.html">Search Cars</a></li>
-                <li><a href="about.html">About Us</a></li>
                 <li><a href="policy.html">Policy</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
@@ -71,8 +77,8 @@
             <h3>Personal Information</h3>
             <div>
                 <div>
-                    <p><strong>Full Name:</strong> Nawaf Al-Ghamdi</p>
-                    <p><strong>Email Address:</strong> nawaf.t18@email.com</p>
+                    <p><strong>Full Name:</strong> <span id="showName">Nawaf Al-Ghamdi</span></p>
+                    <p><strong>Email Address:</strong> <span id="showEmail">nawaf.t18@gmail.com</span></p>
                     <p><strong>Account Status:</strong> <span style="color: green; font-weight: bold;">Active</span></p>
                 </div>
             </div>
@@ -101,8 +107,11 @@
                     <input type="password" id="confirm-password" name="confirm_password" placeholder="********" required>
                 </p>
 
+                
+                <p id="profileMsg" style="font-weight: bold;"></p>
+
                 <p style="text-align: right; margin-top: 10px;">
-                    <input type="submit" value="Save Changes" class="save-btn">
+                    <input type="button" value="Save Changes" class="save-btn" onclick="updateProfile()">
                 </p>
             </form>
         </div>
@@ -120,6 +129,9 @@
         </address>
         <a href="#logo">Back to Top</a>
     </footer>
-    
+
+    <!--JS External-->
+    <script src="script.js"></script>
+
 </body>
 </html>

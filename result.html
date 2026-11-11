@@ -26,13 +26,13 @@
 </head>    
 
 <body>
-    <!--Header Section with Navigation Menu-->
+    
     <header>
         
             <section id="logo">
             <img src="images/logo.svg" alt="Car Rental Logo" width="280" height="150" usemap="#logomap">
             <map name="logomap">
-                 <area shape="rect" coords="0,0,280,150" href="index.html" alt="About Us">
+                 <area shape="rect" coords="0,0,280,150" href="about.html" alt="About Us">
         </map>
         </section>
         
@@ -43,8 +43,6 @@
             <ul>
                 <li><a href="index.html">Home</a></li> 
                 <li><a href="search.html">Search Cars</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="policy.html">Policy</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
@@ -56,6 +54,16 @@
     <main>
         <h2 style="padding: 20px;">Select Your Preferred Car</h2>
         <p style="padding: 20px;">Based on your search criteria, here are the available vehicles:</p>
+
+        
+        <p style="padding: 20px;">
+            <label for="days"><strong>Number of rental days:</strong></label>
+            <input type="number" id="days" min="1" max="30">
+            <button onclick="calculateTotal()">Calculate</button>
+            <button onclick="showPriceSummary()">Price Summary</button>
+        </p>
+        <div id="totals" style="padding: 20px;"></div>
+        <div id="summary" style="padding: 20px;"></div>
 
         <table border="1">
             <caption><strong>Available Cars</strong></caption>
@@ -70,57 +78,57 @@
             </tr>
             </thead>
             <tbody>
-                <!-- Toyota Yaris -->
+                
                 <tr>
                     <td><img src="images/Toyota_Yaris.jpeg" alt="Toyota Yaris" width="120" height="80"></td>
-                    <td><strong>Toyota Yaris 2026</strong><br>Economy</td>
+                    <td><strong id="car1">Toyota Yaris 2026</strong><br>Economy</td>
                     <td>Automatic, AC, 5 Seats, Fuel Efficient</td>
-                    <td>100 SAR / day</td>
+                    <td id="rate1">100 SAR / day</td>
                     <td><a href="policy.html" class="book-btn">Book Now</a></td>
                 </tr>
 
-                <!-- Hyundai Accent -->
+               
                 <tr>
                     <td><img src="images/Hyundai_Accent.jpeg" alt="Hyundai Accent" width="120" height="80"></td>
-                    <td><strong>Hyundai Accent 2026</strong><br>Economy</td>
+                    <td><strong id="car2">Hyundai Accent 2026</strong><br>Economy</td>
                     <td>Automatic, AC, 5 Seats, Bluetooth</td>
-                    <td>110 SAR / day</td>
+                    <td id="rate2">110 SAR / day</td>
                     <td><a href="policy.html" class="book-btn">Book Now</a></td>
                 </tr>
 
-                <!-- Hyundai Tucson -->
+                
                 <tr>
                     <td><img src="images/Hyundai_Tucson.jpeg" alt="Hyundai Tucson" width="120" height="80"></td>
-                    <td><strong>Hyundai Tucson 2026</strong><br>Mid-size SUV</td>
+                    <td><strong id="car3">Hyundai Tucson 2026</strong><br>Mid-size SUV</td>
                     <td>Automatic, AWD, Spacious, 5 Seats</td>
-                    <td>210 SAR / day</td>
+                    <td id="rate3">210 SAR / day</td>
                     <td><a href="policy.html" class="book-btn">Book Now</a></td>
                 </tr>
 
-                <!-- Kia Sportage -->
+                
                 <tr>
                     <td><img src="images/KIA_Sportage.jpeg" alt="Kia Sportage" width="120" height="80"></td>
-                    <td><strong>Kia Sportage 2026</strong><br>Mid-size SUV</td>
+                    <td><strong id="car4">Kia Sportage 2026</strong><br>Mid-size SUV</td>
                     <td>Automatic, Panoramic Roof, 5 Seats</td>
-                    <td>220 SAR / day</td>
+                    <td id="rate4">220 SAR / day</td>
                     <td><a href="policy.html" class="book-btn">Book Now</a></td>
                 </tr>
 
-                <!-- Chevrolet Tahoe -->
+                
                 <tr>
                     <td><img src="images/Chevrolet_Tahoe.jpeg" alt="Chevrolet Tahoe" width="120" height="80"></td>
-                    <td><strong>Chevrolet Tahoe 2026</strong><br>Full-size SUV</td>
+                    <td><strong id="car5">Chevrolet Tahoe 2026</strong><br>Full-size SUV</td>
                     <td>V8 Engine, 8 Seats, Luxury Family Car</td>
-                    <td>420 SAR / day</td>
+                    <td id="rate5">420 SAR / day</td>
                     <td><a href="policy.html" class="book-btn">Book Now</a></td>
                 </tr>
 
-                <!-- GMC Yukon -->
+                
                 <tr>
                     <td><img src="images/GMC_Yukon.jpeg" alt="GMC Yukon" width="120" height="80"></td>
-                    <td><strong>GMC Yukon 2026</strong><br>Full-size SUV</td>
+                    <td><strong id="car6">GMC Yukon 2026</strong><br>Full-size SUV</td>
                     <td>V8 Engine, Leather Seats, Premium Audio</td>
-                    <td>450 SAR / day</td>
+                    <td id="rate6">450 SAR / day</td>
                     <td><a href="policy.html" class="book-btn">Book Now</a></td>
                 </tr>
             </tbody>
@@ -135,6 +143,9 @@
         </address>
         <a href="#logo">Back to Top</a>
     </footer>
-    
+
+    <!--JS External-->
+    <script src="script.js"></script>
+
 </body>
 </html>

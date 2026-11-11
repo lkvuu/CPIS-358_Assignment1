@@ -37,25 +37,20 @@
 
 <body>
 
-    <!--Header Section with Navigation Menu-->
     <header>
         
             <section id="logo">
             <img src="images/logo.svg" alt="Car Rental Logo" width="280" height="150" usemap="#logomap">
             <map name="logomap">
-                 <area shape="rect" coords="0,0,280,150" href="index.html" alt="About Us">
+                 <area shape="rect" coords="0,0,280,150" href="about.html" alt="About Us">
         </map>
         </section>
         
-        
-
         <h1 style="color: rgb(47, 113, 206);">Welcome to Our Car Rental Service</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li> 
                 <li><a href="search.html">Search Cars</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="policy.html">Policy</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
@@ -63,7 +58,7 @@
             </ul>
         </nav>
     </header>
-    <!-- Main Content Section -->
+    
     <main>
         
         <h2 style="text-align:center">Booking Confirmed!</h2>
@@ -71,7 +66,7 @@
         <hr>
 
         <h2>Payment Details</h2>
-        <form method="post" action="index.html">
+        <form name="checkoutForm" method="post" action="index.html" onreset="showCardFields()">
         
             <input type="hidden" name="booking_ref" value="BK-2026-8941">
             <input type="hidden" name="total_price" value="135.00">
@@ -79,33 +74,35 @@
             <p>
                 <strong>Select Payment Method:</strong><br>
                 <label>
-                    <input type="radio" name="payment_method" value="credit_card" checked> Credit / Debit Card
+                    <input type="radio" name="payment_method" value="credit_card" checked onclick="showCardFields()"> Credit / Debit Card
                 </label>
                 <br>
                 <label>
-                <input type="radio" name="payment_method" value="pay_on_pickup"> Pay upon Pickup
+                <input type="radio" name="payment_method" value="pay_on_pickup" onclick="hideCardFields()"> Pay upon Pickup
                 </label>
             </p>
 
-            <p>
-                <label for="card_name">Name on Card:</label><br>
-                <input type="text" id="card_name" name="card_name" placeholder="Enter cardholder name" required>
-            </p>
+            <div id="cardFields">
+                <p>
+                    <label for="card_name">Name on Card:</label><br>
+                    <input type="text" id="card_name" name="card_name" placeholder="Enter cardholder name">
+                </p>
 
-            <p>
-                <label for="card_number">Card Number:</label><br>
-                <input type="text" id="card_number" name="card_number" maxlength="16" placeholder="1234 5678 9012 3456" required>
-            </p>
+                <p>
+                    <label for="card_number">Card Number:</label><br>
+                    <input type="text" id="card_number" name="card_number" maxlength="16" placeholder="1234 5678 9012 3456">
+                </p>
 
-            <p>
-                <label for="exp_date">Expiry Date:</label><br>
-                <input type="text" id="exp_date" name="exp_date" placeholder="MM/YY" size="5" required>
-            </p>
+                <p>
+                    <label for="exp_date">Expiry Date:</label><br>
+                    <input type="text" id="exp_date" name="exp_date" placeholder="MM/YY" size="5">
+                </p>
 
-            <p>
-                <label for="cvv">CVV / Security Code:</label><br>
-                <input type="password" id="cvv" name="cvv" maxlength="4" size="4" placeholder="123" required>
-            </p>
+                <p>
+                    <label for="cvv">CVV / Security Code:</label><br>
+                    <input type="password" id="cvv" name="cvv" maxlength="4" size="4" placeholder="123">
+                </p>
+            </div>
 
             <p>
                 <label>
@@ -121,7 +118,7 @@
             <label for="user-email">Email Address:</label>
             <input type="email" id="user-email" name="email" placeholder="example@email.com" required>
             <p>
-                <input type="submit" value="Complete Reservation">
+                <input type="submit" value="Complete Reservation" onclick="validateCheckout()">
                 <input type="reset" value="Clear Form">
             </p>
         </form>
@@ -134,6 +131,9 @@
         </address>
         <a href="#logo">Back to Top</a>
     </footer>
+
+    <!--JS External-->
+    <script src="script.js"></script>
 
 </body>
 </html>
